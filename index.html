@@ -1,0 +1,1908 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gratulerer med 30 år, Linda ❤️</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&family=Dancing+Script:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --rose: #D4A5A5;
+  --rose-light: #E8C8C8;
+  --rose-deep: #B07878;
+  --beige: #F5E6D3;
+  --beige-light: #FDF8F3;
+  --gold: #C9A96E;
+  --gold-light: #E0CDA3;
+  --dark: #2C2C2C;
+  --dark-soft: #4A4A4A;
+  --white: #FFFFFF;
+  --cream: #FFF9F5;
+  --tg-green: #DCF0D6;
+  --tg-green-dark: #C5E1BE;
+  --tg-white: #FFFFFF;
+  --tg-bg: #E8DDD3;
+  --tg-name-out: #4FAC6D;
+  --tg-name-in: #3A7BD5;
+  --tg-time: #6E8A7A;
+  --tg-time-white: #8696A0;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: var(--dark);
+  background: var(--cream);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  background: linear-gradient(160deg, var(--beige-light) 0%, var(--rose-light) 50%, var(--beige) 100%);
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(ellipse at 30% 50%, rgba(201,169,110,0.08) 0%, transparent 50%),
+              radial-gradient(ellipse at 70% 30%, rgba(212,165,165,0.12) 0%, transparent 50%);
+  animation: heroGlow 12s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes heroGlow {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(-3%, 2%) scale(1.05); }
+}
+
+.hero-hearts {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.floating-heart {
+  position: absolute;
+  font-size: 1.2rem;
+  opacity: 0;
+  animation: floatHeart linear infinite;
+}
+
+@keyframes floatHeart {
+  0% { opacity: 0; transform: translateY(100vh) rotate(0deg) scale(0.5); }
+  10% { opacity: 0.6; }
+  90% { opacity: 0.6; }
+  100% { opacity: 0; transform: translateY(-10vh) rotate(45deg) scale(1); }
+}
+
+.hero-age {
+  font-family: 'Dancing Script', cursive;
+  font-size: clamp(6rem, 15vw, 12rem);
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  opacity: 0;
+  animation: fadeInScale 1.5s ease-out 0.3s forwards;
+  text-shadow: 0 2px 30px rgba(201,169,110,0.2);
+  position: relative;
+  z-index: 1;
+}
+
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 4vw, 3.2rem);
+  font-weight: 600;
+  color: var(--dark);
+  margin-top: 0.5rem;
+  opacity: 0;
+  animation: fadeInUp 1.2s ease-out 0.8s forwards;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-subtitle {
+  font-family: 'Lato', sans-serif;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-weight: 300;
+  color: var(--dark-soft);
+  margin-top: 1.2rem;
+  max-width: 600px;
+  line-height: 1.8;
+  opacity: 0;
+  animation: fadeInUp 1.2s ease-out 1.3s forwards;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-divider {
+  width: 60px;
+  height: 2px;
+  background: var(--gold);
+  margin: 1.5rem auto 0;
+  opacity: 0;
+  animation: fadeInUp 1.2s ease-out 1.6s forwards;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  animation: fadeInUp 1s ease-out 2.2s forwards;
+  z-index: 1;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.hero-scroll span {
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-right: 2px solid var(--gold);
+  border-bottom: 2px solid var(--gold);
+  transform: rotate(45deg);
+  animation: scrollBounce 2s ease-in-out infinite;
+}
+
+@keyframes scrollBounce {
+  0%, 100% { transform: rotate(45deg) translateY(0); opacity: 0.6; }
+  50% { transform: rotate(45deg) translateY(8px); opacity: 1; }
+}
+
+@keyframes fadeInScale {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.section-header {
+  text-align: center;
+  padding: 5rem 2rem 3rem;
+}
+
+.section-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.section-header p {
+  font-size: 1.05rem;
+  color: var(--dark-soft);
+  margin-top: 0.8rem;
+  font-weight: 300;
+}
+
+.section-header .ornament {
+  display: block;
+  margin: 1rem auto 0;
+  width: 40px;
+  height: 2px;
+  background: var(--gold);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================
+   TIMELINE — two-column layout
+   ============================================ */
+
+.timeline-section {
+  background: var(--cream);
+  padding-bottom: 5rem;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, transparent, var(--rose), var(--gold), var(--rose), transparent);
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  width: 100%;
+  padding: 1.5rem 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  top: 2.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  background: var(--gold);
+  border: 3px solid var(--cream);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px var(--rose-light);
+  z-index: 2;
+}
+
+.timeline-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 3.5rem;
+}
+
+.timeline-item:nth-child(odd) .timeline-row {
+  flex-direction: row;
+}
+
+.timeline-item:nth-child(even) .timeline-row {
+  flex-direction: row-reverse;
+}
+
+.timeline-card {
+  flex: 1;
+  min-width: 0;
+  background: var(--white);
+  border-radius: 16px;
+  padding: 1.8rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.04), 0 1px 4px rgba(0,0,0,0.02);
+  border: 1px solid rgba(212,165,165,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-item:nth-child(odd) .timeline-card {
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) .timeline-card {
+  text-align: left;
+}
+
+.timeline-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.07), 0 2px 8px rgba(0,0,0,0.03);
+}
+
+.timeline-date {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 0.6rem;
+}
+
+.timeline-card .description {
+  font-size: 0.95rem;
+  color: var(--dark-soft);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.timeline-card .emoji-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* ============================================
+   PHOTO GALLERY / DROPZONE
+   ============================================ */
+
+.timeline-photos {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.photo-gallery {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  background: var(--beige-light);
+  aspect-ratio: 4/3;
+}
+
+.photo-gallery:empty {
+  display: none;
+}
+
+.carousel-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  cursor: pointer;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.carousel-slide img,
+.carousel-slide video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.carousel-slide .video-badge {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 3px 8px;
+  border-radius: 5px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.7);
+  border: none;
+  color: var(--dark);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  cursor: pointer;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s;
+  line-height: 1;
+  backdrop-filter: blur(4px);
+}
+
+.photo-gallery:hover .carousel-nav {
+  opacity: 1;
+}
+
+.carousel-nav:hover {
+  background: rgba(255,255,255,0.92);
+}
+
+.carousel-prev { left: 8px; }
+.carousel-next { right: 8px; }
+
+.carousel-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 3;
+}
+
+.carousel-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.carousel-dot.active {
+  background: #fff;
+  transform: scale(1.3);
+}
+
+.photo-thumb-wrap .photo-delete {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  font-size: 13px;
+  line-height: 22px;
+  text-align: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.photo-thumb-wrap:hover .photo-delete {
+  opacity: 1;
+}
+
+/* -- Presentation mode: remove next line to re-enable upload UI -- */
+.photo-dropzone { display: none; }
+
+.photo-dropzone._enabled {
+  border: 2px dashed var(--rose-light);
+  border-radius: 12px;
+  padding: 2rem 1rem;
+  text-align: center;
+  color: var(--rose);
+  font-size: 0.85rem;
+  font-weight: 300;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  position: relative;
+}
+
+.photo-dropzone input[type="file"] {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.photo-dropzone .drop-icon {
+  font-size: 1.8rem;
+  opacity: 0.6;
+}
+
+.photo-dropzone .drop-text {
+  pointer-events: none;
+}
+
+.photo-dropzone.dragover {
+  background: rgba(212,165,165,0.12);
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.photo-dropzone .upload-progress {
+  font-size: 0.75rem;
+  color: var(--gold);
+  margin-top: 0.3rem;
+}
+
+/* ============================================
+   LIGHTBOX
+   ============================================ */
+
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.88);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.lightbox-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox-overlay img,
+.lightbox-overlay video {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 8px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+  object-fit: contain;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  line-height: 1;
+}
+
+.lightbox-close:hover {
+  opacity: 1;
+}
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.15);
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.8rem;
+  border-radius: 50%;
+  line-height: 1;
+  transition: background 0.2s;
+}
+
+.lightbox-nav:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+.lightbox-prev { left: 1rem; }
+.lightbox-next { right: 1rem; }
+
+.lightbox-counter {
+  position: absolute;
+  bottom: 1.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255,255,255,0.7);
+  font-size: 0.85rem;
+  font-family: 'Lato', sans-serif;
+}
+
+/* ============================================
+   TELEGRAM CHAT BUBBLES
+   ============================================ */
+
+.tg-bubbles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 0.6rem;
+  background: var(--tg-bg);
+  border-radius: 10px;
+  text-align: left;
+}
+
+.tg-bubble {
+  max-width: 88%;
+  padding: 0.5rem 0.6rem 0.35rem;
+  border-radius: 8px;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: var(--dark);
+  position: relative;
+  word-wrap: break-word;
+}
+
+.tg-bubble .tg-name {
+  font-size: 0.72rem;
+  font-weight: 700;
+  margin-bottom: 0.15rem;
+  display: block;
+}
+
+.tg-bubble .tg-text { display: block; }
+
+.tg-bubble .tg-time {
+  font-size: 0.62rem;
+  float: right;
+  margin-left: 0.6rem;
+  margin-top: 0.2rem;
+  opacity: 0.7;
+  white-space: nowrap;
+}
+
+.tg-bubble.outgoing {
+  background: var(--tg-green);
+  align-self: flex-end;
+  border-bottom-right-radius: 3px;
+}
+
+.tg-bubble.outgoing .tg-name { color: var(--tg-name-out); }
+.tg-bubble.outgoing .tg-time { color: var(--tg-time); }
+
+.tg-bubble.incoming {
+  background: var(--tg-white);
+  align-self: flex-start;
+  border-bottom-left-radius: 3px;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.04);
+}
+
+.tg-bubble.incoming .tg-name { color: var(--tg-name-in); }
+.tg-bubble.incoming .tg-time { color: var(--tg-time-white); }
+
+/* ============================================
+   STATS SECTION
+   ============================================ */
+
+.stats-section {
+  background: linear-gradient(180deg, var(--cream) 0%, var(--beige-light) 50%, var(--cream) 100%);
+  padding-bottom: 5rem;
+}
+
+.stats-grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.stat-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 2rem 1.2rem;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+  border: 1px solid rgba(212,165,165,0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(0,0,0,0.06);
+}
+
+.stat-emoji { font-size: 2.2rem; display: block; margin-bottom: 0.6rem; }
+
+.stat-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1.1;
+  margin-bottom: 0.3rem;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--dark);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.3rem;
+}
+
+.stat-sub {
+  font-size: 0.8rem;
+  color: var(--dark-soft);
+  font-weight: 300;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+/* ============================================
+   FOOTER / ENDING
+   ============================================ */
+
+.ending-section {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(160deg, var(--beige-light) 0%, var(--rose-light) 50%, var(--beige) 100%);
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.ending-heart {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  animation: heartPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes heartPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+.ending-message {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  font-weight: 600;
+  color: var(--dark);
+  max-width: 650px;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.ending-from {
+  font-family: 'Dancing Script', cursive;
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  color: var(--rose-deep);
+  margin-top: 1rem;
+}
+
+.ending-small {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.9rem;
+  color: var(--dark-soft);
+  font-weight: 300;
+  margin-top: 2rem;
+  max-width: 500px;
+  line-height: 1.7;
+}
+
+/* ============================================
+   CONFETTI
+   ============================================ */
+
+.confetti-container {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.confetti-piece {
+  position: absolute;
+  width: 10px; height: 10px;
+  top: -20px;
+  opacity: 0;
+  animation: confettiFall linear forwards;
+}
+
+@keyframes confettiFall {
+  0% { opacity: 1; transform: translateY(0) rotate(0deg) scale(1); }
+  80% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(100vh) rotate(720deg) scale(0.5); }
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 900px) {
+  .timeline { padding: 0 1rem; }
+  .timeline::before { left: 16px; }
+
+  .timeline-dot {
+    left: 16px;
+    transform: translateX(-50%);
+  }
+
+  .timeline-row,
+  .timeline-item:nth-child(odd) .timeline-row,
+  .timeline-item:nth-child(even) .timeline-row {
+    flex-direction: column;
+    padding-left: 36px;
+    gap: 0.8rem;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-card,
+  .timeline-item:nth-child(even) .timeline-card {
+    text-align: left;
+  }
+
+  .timeline-photos {
+    width: 100%;
+    flex: none;
+  }
+
+  .photo-gallery {
+    width: 100%;
+    aspect-ratio: 4/3;
+    min-height: 200px;
+  }
+
+  .carousel-nav {
+    opacity: 1;
+    width: 36px;
+    height: 36px;
+  }
+
+  .lightbox-nav {
+    font-size: 2.4rem;
+    padding: 1rem;
+  }
+
+  .lightbox-prev { left: 0.4rem; }
+  .lightbox-next { right: 0.4rem; }
+}
+
+@media (max-width: 480px) {
+  .hero { padding: 1.5rem 1rem; }
+  .hero-age { font-size: 5rem; }
+  .hero-subtitle { font-size: 0.95rem; line-height: 1.7; }
+
+  .section-header { padding: 3.5rem 1rem 2rem; }
+  .section-header h2 { font-size: 1.6rem; }
+
+  .timeline { padding: 0 0.6rem; }
+  .timeline-item { padding: 1rem 0; }
+  .timeline-card { padding: 1.2rem; }
+  .timeline-card h3 { font-size: 1.1rem; }
+  .timeline-card .description { font-size: 0.88rem; }
+
+  .timeline-row,
+  .timeline-item:nth-child(odd) .timeline-row,
+  .timeline-item:nth-child(even) .timeline-row {
+    padding-left: 32px;
+    gap: 0.6rem;
+  }
+
+  .timeline-photos {
+    width: 100%;
+    flex: none;
+  }
+
+  .photo-gallery {
+    width: 100%;
+    aspect-ratio: 3/2;
+    min-height: 180px;
+  }
+
+  .stats-grid { grid-template-columns: 1fr 1fr; gap: 0.8rem; padding: 0 1rem; }
+  .stat-card { padding: 1.3rem 0.8rem; }
+  .stat-number { font-size: 2rem; }
+  .stat-sub { font-size: 0.72rem; }
+
+  .tg-bubble { font-size: 0.82rem; }
+  .tg-bubble .tg-name { font-size: 0.68rem; }
+
+  .lightbox-overlay img,
+  .lightbox-overlay video {
+    max-width: 96vw;
+    max-height: 85vh;
+    border-radius: 6px;
+  }
+
+  .lightbox-close { top: 0.6rem; right: 0.8rem; font-size: 1.6rem; }
+  .lightbox-counter { font-size: 0.75rem; bottom: 0.8rem; }
+}
+</style>
+</head>
+<body>
+
+<section class="hero" id="top">
+  <div class="hero-hearts" id="heroHearts"></div>
+  <div class="hero-age">30</div>
+  <h1 class="hero-title">Gratulerer med dagen, Linda</h1>
+  <p class="hero-subtitle">
+    Fra første date i Åsgårdstrand til i dag &mdash; hvert dag med deg har vært mine beste dager.
+    Her er vår historie, fortalt gjennom telegram-meldingene våres.
+  </p>
+  <div class="hero-divider"></div>
+  <button class="hero-scroll" onclick="document.getElementById('timeline').scrollIntoView({behavior:'smooth'})" aria-label="Scroll ned">
+    <span></span>
+  </button>
+</section>
+
+<section class="timeline-section" id="timeline">
+  <div class="section-header reveal">
+    <h2>Vår historie</h2>
+    <p>Fra den første meldingen til akkurat nå</p>
+    <span class="ornament"></span>
+  </div>
+
+  <div class="timeline">
+
+    <div class="timeline-item reveal" data-event-id="vinterbro-2018">
+      <div class="timeline-dot"></div>
+      <div class="timeline-row">
+        <div class="timeline-card">
+          <span class="emoji-icon">⚡</span>
+          <div class="timeline-date">~Høsten 2018</div>
+          <h3>Kvelden på Vinterbro</h3>
+          <p class="description">Det startet helt tilfeldig. Daniels romkamerat og Lindas bestevenn hadde blitt kjærester, og en kveld på Vinterbro endte hele gjengen opp med å se film sammen. Der satt hun. Det vakreste mennesket Daniel noensinne hadde sett. Han prøvde å oppføre seg normalt. Det gikk middels. Fra den kvelden var det umulig å tenke på noe annet.</p>
+        </div>
+        <div class="timeline-photos">
+          <div class="photo-gallery"></div>
+          <div class="photo-dropzone">
+            <span class="drop-icon">📷</span>
+            <span class="drop-text">Slipp bilder her</span>
+            <input type="file" multiple accept="image/*,video/*">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal" data-event-id="aug-2018">
+      <div class="timeline-dot"></div>
+      <div class="timeline-row">
+        <div class="timeline-card">
+          <span class="emoji-icon">💀</span>
+          <div class="timeline-date">~August 2018</div>
+          <h3>Forsøk nummer 1</h3>
+          <p class="description">Ukene gikk, men Linda forsvant aldri fra hodet. Daniel gikk rundt som en skygge av seg selv, helt oppslukt av jenta fra filmkvelden. Til slutt mannet han seg opp, formulerte verdens mest gjennomtenkte melding, og sendte den av gårde. Svaret? Et blankt, iskalt, nådeløst nei. Så brutalt at meldingene ble slettet i ren skam. Ingen bevis eksisterer — og det er nok best sånn.</p>
+          <div class="tg-bubbles">
+            <div class="tg-bubble incoming">
+              <span class="tg-name">Daniel Vedvik</span>
+              <span class="tg-text">[Denne meldingen ble slettet av avsender fordi den var for flau]</span>
+              <span class="tg-time">?? : ??</span>
+            </div>
+            <div class="tg-bubble outgoing">
+              <span class="tg-name">Linda</span>
+              <span class="tg-text">Nei.</span>
+              <span class="tg-time">?? : ??</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-photos">
+          <div class="photo-gallery"></div>
+          <div class="photo-dropzone">
+            <span class="drop-icon">📷</span>
+            <span class="drop-text">Slipp bilder her</span>
+            <input type="file" multiple accept="image/*,video/*">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal" data-event-id="apr-2019-kontakt">
+      <div class="timeline-dot"></div>
+      <div class="timeline-row">
+        <div class="timeline-card">
+          <span class="emoji-icon">💌</span>
+          <div class="timeline-date">21. april 2019</div>
+          <h3>Den modige meldingen</h3>
+          <p class="description">8 måneder etter det brutale avslaget. Daniel hadde prøvd å gå videre, men så — en søndag kveld — dukket det opp en melding fra nettopp henne. Linda tok mot til seg og sendte den ærligste meldingen noensinne. Jenta fra filmkvelden på Vinterbro ville plutselig bli bedre kjent. Revansje hadde aldri smakt så godt.</p>
+          <div class="tg-bubbles">
+            <div class="tg-bubble outgoing">
+              <span class="tg-name">Linda</span>
+              <span class="tg-text">Hei! Sikkert veldig rart å høre fra meg nå, og jeg vet ikke om det er det samme for deg lenger. Men helt plutselig begynte det å endre seg for meg.. Jeg har veldig lyst til å bli bedre kjent med deg 😊</span>
+              <span class="tg-time">23:37</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-photos">
+          <div class="photo-gallery"></div>
+          <div class="photo-dropzone">
+            <span class="drop-icon">📷</span>
+            <span class="drop-text">Slipp bilder her</span>
+            <input type="file" multiple accept="image/*,video/*">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal" data-event-id="apr-2019-fred">
+      <div class="timeline-dot"></div>
+      <div class="timeline-row">
+        <div class="timeline-card">
+          <span class="emoji-icon">🙏</span>
+          <div class="timeline-date">24. april 2019</div>
+          <h3>«Jeg sliter med å få fred»</h3>
+          <p class="description">Daniel prøvde å leke "hard-to-get". Men bare 13 timer senere klarte han ikke å slippe tanken på Linda. Noen ting er bare ment å være.</p>
+          <div class="tg-bubbles">
+            <div class="tg-bubble incoming">
+              <span class="tg-name">Daniel Vedvik</span>
+              <span class="tg-text">Jeg sliter med å få fred med dette. Hvis du fortsatt vil og ikke syntes det er for rart, så vil jeg gjerne møtt deg for en prat</span>
+              <span class="tg-time">14:55</span>
+            </div>
+            <div class="tg-bubble outgoing">
+              <span class="tg-name">Linda</span>
+              <span class="tg-text">Ja om jeg vil!</span>
+              <span class="tg-time">14:59</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-photos">
+          <div class="photo-gallery"></div>
+          <div class="photo-dropzone">
+            <span class="drop-icon">📷</span>
+            <span class="drop-text">Slipp bilder her</span>
+            <input type="file" multiple accept="image/*,video/*">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal" data-event-id="apr-2019-asgardstrand">
+      <div class="timeline-dot"></div>
+      <div class="timeline-row">
+        <div class="timeline-card">
+          <span class="emoji-icon">🚗</span>
+          <div class="timeline-date">24. april 2019 — kvelden</div>
+          <h3>Første date i Åsgårdstrand</h3>
+          <p class="description">To fremmede, to biler, én nervøs kveld. Linda i sin brune Ford, Daniel i sin grønn-grå Audi. GPS sa 5 minutter — hjertet sa det var nå eller aldri.</p>
+          <div class="tg-bubbles">
+            <div class="tg-bubble outgoing">
+              <span class="tg-name">Linda</span>
+              <span class="tg-text">Jeg har brun Ford</span>
+              <span class="tg-time">19:55</span>
+            </div>
+            <div class="tg-bubble incoming">
+              <span class="tg-name">Daniel Vedvik</span>
+              <span class="tg-text">Det er en Audi a3. Ca grønn/grå. GPS sier 5 min</span>
+              <span class="tg-time">19:52</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-photos">
+          <div class="photo-gallery"></div>
+          <div class="photo-dropzone">
+            <span class="drop-icon">📷</span>
+            <span class="drop-text">Slipp bilder her</span>
+            <input type="file" multiple accept="image/*,video/*">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal" data-event-id="apr-2019-dinner">
+      <div class="timeline-dot"></div>
+      <div class="timeline-row">
+        <div class="timeline-card">
+          <span class="emoji-icon">💋</span>
+          <div class="timeline-date">27. april 2019</div>
+          <h3>Dinner, Oslo — og det første kysset</h3>
+          <p class="description">Tre dager etter den første daten var det klart for date nummer to: Dinner i Oslo. Etterpå gikk turen opp til Slottsplassen, med Freia-skiltet glødende i bakgrunnen som Oslos mest romantiske spotlight. Der, på toppen, skjedde det — Linda hadde tydeligvis bestemt seg, for hun klinte til som om det var verdens siste kyss. Daniel fikk knapt puste. Magisk? Oh boy, gjett om</p>
+        </div>
+        <div class="timeline-photos">
+          <div class="photo-gallery"></div>
+          <div class="photo-dropzone">
+            <span class="drop-icon">📷</span>
+            <span class="drop-text">Slipp bilder her</span>
+            <input type="file" multiple accept="image/*,video/*">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal" data-event-id="jun-2019-forelsket">
+      <div class="timeline-dot"></div>
+      <div class="timeline-row">
+        <div class="timeline-card">
+          <span class="emoji-icon">💕</span>
+          <div class="timeline-date">Juni 2019</div>
+          <h3>Hodestups forelsket</h3>
+          <p class="description">Det tok ikke lang tid. Meldingene fløy frem og tilbake, og god morgen-meldingene ble mer og mer fullstappet med hjerter.</p>
+          <div class="tg-bubbles">
+            <div class="tg-bubble incoming">
+              <span class="tg-name">Daniel Vedvik</span>
+              <span class="tg-text">Goood morgen jenta mi!❤️❤️ Ville bare fortelle deg at jeg elsker deg så ufattelig mye og at du er grunnen til at jeg smiler fra jeg står opp til jeg legger meg 😊</span>
+              <span class="tg-time">07:43</span>
+            </div>
+            <div class="tg-bubble outgoing">
+              <span class="tg-name">Linda</span>
+              <span class="tg-text">Tenk å starte dagen med en så koselig melding❤️ elsker deg også bare mer og mer for hver dag. Tenk at du er min og bare min!😍 Skal takke Gud hver dag for det.</span>
+              <span class="tg-time">08:12</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-photos">
+          <div class="photo-gallery"></div>
+          <div class="photo-dropzone">
+            <span class="drop-icon">📷</span>
+            <span class="drop-text">Slipp bilder her</span>
+            <input type="file" multiple accept="image/*,video/*">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal" data-event-id="sommer-2019-forlovelse">
+      <div class="timeline-dot"></div>
+      <div class="timeline-row">
+        <div class="timeline-card">
+          <span class="emoji-icon">💍</span>
+          <div class="timeline-date">Sommeren 2019</div>
+          <h3>«Hun sa ja!»</h3>
+          <p class="description">Etter bare noen uker visste de begge. Ringen ble hentet hos Bjørklund, forlovelsesfesten ble planlagt, og livet tok fart.</p>
+          <div class="tg-bubbles">
+            <div class="tg-bubble outgoing">
+              <span class="tg-name">Linda</span>
+              <span class="tg-text">Det føltes bare så unormalt riktig.</span>
+              <span class="tg-time">01:13</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-photos">
+          <div class="photo-gallery"></div>
+          <div class="photo-dropzone">
+            <span class="drop-icon">📷</span>
+            <span class="drop-text">Slipp bilder her</span>
+            <input type="file" multiple accept="image/*,video/*">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal" data-event-id="nov-2019-hus">
+      <div class="timeline-dot"></div>
+      <div class="timeline-row">
+        <div class="timeline-card">
+          <span class="emoji-icon">🏗️</span>
+          <div class="timeline-date">November 2019</div>
+          <h3>Første vegg er på vei opp</h3>
+          <p class="description">Midt i bryllupsplanlegging begynte de også å bygge hus. Forelsket, forlovet, og nå boligbyggere — alt på en gang.</p>
+          <div class="tg-bubbles">
+            <div class="tg-bubble incoming">
+              <span class="tg-name">Daniel Vedvik</span>
+              <span class="tg-text">Første vegg er på vei opp!</span>
+              <span class="tg-time">15:32</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-photos">
+          <div class="photo-gallery"></div>
+          <div class="photo-dropzone">
+            <span class="drop-icon">📷</span>
+            <span class="drop-text">Slipp bilder her</span>
+            <input type="file" multiple accept="image/*,video/*">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal" data-event-id="jan-2020-flytter">
+      <div class="timeline-dot"></div>
+      <div class="timeline-row">
+        <div class="timeline-card">
+          <span class="emoji-icon">🏡</span>
+          <div class="timeline-date">Januar 2020</div>
+          <h3>Vårt første hjem</h3>
+          <p class="description">Nøklene var i hånden, og Linda var klar for et nytt kapittel i Sandefjord. Endelig under samme tak.</p>
+          <div class="tg-bubbles">
+            <div class="tg-bubble outgoing">
+              <span class="tg-name">Linda</span>
+              <span class="tg-text">Perfekt å bli litt bedre kjent med Sandefjord før jeg flytter dit snart</span>
+              <span class="tg-time">20:14</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-photos">
+          <div class="photo-gallery"></div>
+          <div class="photo-dropzone">
+            <span class="drop-icon">📷</span>
+            <span class="drop-text">Slipp bilder her</span>
+            <input type="file" multiple accept="image/*,video/*">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal" data-event-id="feb-2020-bryllup">
+      <div class="timeline-dot"></div>
+      <div class="timeline-row">
+        <div class="timeline-card">
+          <span class="emoji-icon">👰‍♀️</span>
+          <div class="timeline-date">8. februar 2020</div>
+          <h3>Bryllupsdagen</h3>
+          <p class="description">Natt til bryllupsdagen. Klokken er over midnatt, ingen av dem klarer å sove. To meldinger, sendt med ett minutts mellomrom, som sier alt.</p>
+          <div class="tg-bubbles">
+            <div class="tg-bubble incoming">
+              <span class="tg-name">Daniel Vedvik</span>
+              <span class="tg-text">Sov godt i Jesu navn jenta mi!❤️ Jeg gleder meg til å dele resten av livet mitt med deg. Det er for godt til å være sant. I morgen blir en vill dag!🥂💃🏽🕺🏽</span>
+              <span class="tg-time">00:12</span>
+            </div>
+            <div class="tg-bubble outgoing">
+              <span class="tg-name">Linda</span>
+              <span class="tg-text">Gleder meg også SÅ mye😍 elsker deg❤️ du er min store helt, trygghet, stolthet og klippe i livet. Sov godt😘</span>
+              <span class="tg-time">00:13</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-photos">
+          <div class="photo-gallery"></div>
+          <div class="photo-dropzone">
+            <span class="drop-icon">📷</span>
+            <span class="drop-text">Slipp bilder her</span>
+            <input type="file" multiple accept="image/*,video/*">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal" data-event-id="mar-2020-corona">
+      <div class="timeline-dot"></div>
+      <div class="timeline-row">
+        <div class="timeline-card">
+          <span class="emoji-icon">🦠</span>
+          <div class="timeline-date">Mars 2020</div>
+          <h3>Lockdown — for to</h3>
+          <p class="description">Hjem fra en litt for kort bryllupsreise, rett inn i corona og lockdown. Hele verden stengte ned, men innenfor fire vegger ble de to skikkelig godt kjent. Kanskje litt <em>for</em> godt kjent. Helt avhengige av hverandre, 24/7, uten noe annet å gjøre. Ikke akkurat en overraskelse at Noel dukket opp 16 måneder senere.</p>
+        </div>
+        <div class="timeline-photos">
+          <div class="photo-gallery"></div>
+          <div class="photo-dropzone">
+            <span class="drop-icon">📷</span>
+            <span class="drop-text">Slipp bilder her</span>
+            <input type="file" multiple accept="image/*,video/*">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal" data-event-id="jul-2021-hus2">
+      <div class="timeline-dot"></div>
+      <div class="timeline-row">
+        <div class="timeline-card">
+          <span class="emoji-icon">🏠</span>
+          <div class="timeline-date">Juli 2021</div>
+          <h3>Hus nummer 2!</h3>
+          <p class="description">Lockdown-paret hadde ikke sittet stille. Med baby i magen og drømmer i hodet flyttet Daniel og Linda inn i splitter nytt hus. Nybygg, nye muligheter, og snart en liten familie på tre. Timingen kunne ikke vært bedre på ferdigstilling kunne ikke vært bedre.</p>
+        </div>
+        <div class="timeline-photos">
+          <div class="photo-gallery"></div>
+          <div class="photo-dropzone">
+            <span class="drop-icon">📷</span>
+            <span class="drop-text">Slipp bilder her</span>
+            <input type="file" multiple accept="image/*,video/*">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal" data-event-id="jul-2021-noel">
+      <div class="timeline-dot"></div>
+      <div class="timeline-row">
+        <div class="timeline-card">
+          <span class="emoji-icon">👶</span>
+          <div class="timeline-date">Juli 2021</div>
+          <h3>Noel kommer til verden</h3>
+          <p class="description">Fra to til tre. Den lille gutten som gjorde mamma og pappa til en familie. Riene startet, og en ny reise begynte.</p>
+          <div class="tg-bubbles">
+            <div class="tg-bubble incoming">
+              <span class="tg-name">Daniel Vedvik</span>
+              <span class="tg-text">Da er det begynt smått med rier og vi venter nå på riktig tidspunkt å reise inn til sykehuset på 🙏🏼</span>
+              <span class="tg-time">18:22</span>
+            </div>
+            <div class="tg-bubble outgoing">
+              <span class="tg-name">Linda</span>
+              <span class="tg-text">Noel er verdens heldigste som har deg som pappa❤️</span>
+              <span class="tg-time">14:31</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-photos">
+          <div class="photo-gallery"></div>
+          <div class="photo-dropzone">
+            <span class="drop-icon">📷</span>
+            <span class="drop-text">Slipp bilder her</span>
+            <input type="file" multiple accept="image/*,video/*">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal" data-event-id="feb-2023-molly">
+      <div class="timeline-dot"></div>
+      <div class="timeline-row">
+        <div class="timeline-card">
+          <span class="emoji-icon">🎀</span>
+          <div class="timeline-date">18. februar 2023</div>
+          <h3>Velkommen, Molly!</h3>
+          <p class="description">Familien var komplett. En liten jente med et navn de begge elsket fra første stund.</p>
+          <div class="tg-bubbles">
+            <div class="tg-bubble outgoing">
+              <span class="tg-name">Linda</span>
+              <span class="tg-text">Da blir det Molly</span>
+              <span class="tg-time">19:47</span>
+            </div>
+            <div class="tg-bubble incoming">
+              <span class="tg-name">Daniel Vedvik</span>
+              <span class="tg-text">Jaa Molly gull ❤️</span>
+              <span class="tg-time">19:48</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-photos">
+          <div class="photo-gallery"></div>
+          <div class="photo-dropzone">
+            <span class="drop-icon">📷</span>
+            <span class="drop-text">Slipp bilder her</span>
+            <input type="file" multiple accept="image/*,video/*">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal" data-event-id="2025-nytt-hus">
+      <div class="timeline-dot"></div>
+      <div class="timeline-row">
+        <div class="timeline-card">
+          <span class="emoji-icon">🔨</span>
+          <div class="timeline-date">2025 – 2026</div>
+          <h3>Neste kapittel — nytt hus</h3>
+          <p class="description">Flyttingen stopper aldri. Valg av ny kledning, ny benkeplate, og en fremtid med enda mer plass til besøk, kos, samfunn, latter og liv.</p>
+          <div class="tg-bubbles">
+            <div class="tg-bubble outgoing">
+              <span class="tg-name">Linda</span>
+              <span class="tg-text">Nydelig! Vi tar den</span>
+              <span class="tg-time">12:05</span>
+            </div>
+            <div class="tg-bubble outgoing">
+              <span class="tg-name">Linda</span>
+              <span class="tg-text">Wow! Blir såå bra 😍</span>
+              <span class="tg-time">16:33</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-photos">
+          <div class="photo-gallery"></div>
+          <div class="photo-dropzone">
+            <span class="drop-icon">📷</span>
+            <span class="drop-text">Slipp bilder her</span>
+            <input type="file" multiple accept="image/*,video/*">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal" data-event-id="i-dag-30">
+      <div class="timeline-dot"></div>
+      <div class="timeline-row">
+        <div class="timeline-card" style="background: linear-gradient(135deg, var(--white), rgba(201,169,110,0.08)); border: 2px solid var(--gold-light);">
+          <span class="emoji-icon">🎂</span>
+          <div class="timeline-date">I dag</div>
+          <h3>Linda fyller 30!</h3>
+          <p class="description">30 år. Mamma til to. Kone. Bestevenn. Drømmejenta. Dette er heldigvis bare starten — det beste ligger foran oss.</p>
+          <div class="tg-bubbles">
+            <div class="tg-bubble incoming">
+              <span class="tg-name">Daniel Vedvik</span>
+              <span class="tg-text">Du gjør meg lykkelig jenta mi! Jeg elsker hver dag jeg får være med deg ❤️</span>
+              <span class="tg-time">da som nå</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-photos">
+          <div class="photo-gallery"></div>
+          <div class="photo-dropzone">
+            <span class="drop-icon">📷</span>
+            <span class="drop-text">Slipp bilder her</span>
+            <input type="file" multiple accept="image/*,video/*">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="stats-section" id="stats">
+  <div class="section-header reveal">
+    <h2>Vår kjærlighet i tall</h2>
+    <p>42 931 meldinger over 7 år — her er hva de inneholder</p>
+    <span class="ornament"></span>
+  </div>
+  <div class="stats-grid">
+    <div class="stat-card reveal">
+      <span class="stat-emoji">💬</span>
+      <div class="stat-number" data-target="42931">0</div>
+      <div class="stat-label">Meldinger</div>
+      <div class="stat-sub">Det er ca. 17 meldinger om dagen. Hver eneste dag. I 7 år.</div>
+    </div>
+    <div class="stat-card reveal">
+      <span class="stat-emoji">❤️</span>
+      <div class="stat-number" data-target="51730">0</div>
+      <div class="stat-label">Hjerter sendt</div>
+      <div class="stat-sub">Nok hjerter til å fylle Slottsplassen. Omtrent.</div>
+    </div>
+    <div class="stat-card reveal">
+      <span class="stat-emoji">🥰</span>
+      <div class="stat-number" data-target="283">0</div>
+      <div class="stat-label">«Elsker deg»</div>
+      <div class="stat-sub">Og det er bare de som ble skrevet ned.</div>
+    </div>
+    <div class="stat-card reveal">
+      <span class="stat-emoji">😂</span>
+      <div class="stat-number" data-target="5778">0</div>
+      <div class="stat-label">Ganger vi lo</div>
+      <div class="stat-sub">haha, 😂, og 🤣 — nesten like mange som hjertene.</div>
+    </div>
+    <div class="stat-card reveal">
+      <span class="stat-emoji">😘</span>
+      <div class="stat-number" data-target="1770">0</div>
+      <div class="stat-label">Kysse-emojier</div>
+      <div class="stat-sub">Digitale kyss. De ekte er det enda flere av.</div>
+    </div>
+    <div class="stat-card reveal">
+      <span class="stat-emoji">📸</span>
+      <div class="stat-number" data-target="6085">0</div>
+      <div class="stat-label">Bilder & videoer</div>
+      <div class="stat-sub">Øyeblikk fanget og delt — bare oss to.</div>
+    </div>
+    <div class="stat-card reveal">
+      <span class="stat-emoji">🌙</span>
+      <div class="stat-number" data-target="273">0</div>
+      <div class="stat-label">God morgen & god natt</div>
+      <div class="stat-sub">Hver dag starter og slutter med deg.</div>
+    </div>
+    <div class="stat-card reveal">
+      <span class="stat-emoji">💭</span>
+      <div class="stat-number" data-target="31">0</div>
+      <div class="stat-label">«Savner deg»</div>
+      <div class="stat-sub">Fordi avstand aldri ble lett.</div>
+    </div>
+    <div class="stat-card reveal">
+      <span class="stat-emoji">👸</span>
+      <div class="stat-number" data-target="111">0</div>
+      <div class="stat-label">«Jenta mi»</div>
+      <div class="stat-sub">Daniels favorittord — fordi det er sant.</div>
+    </div>
+    <div class="stat-card reveal">
+      <span class="stat-emoji">💎</span>
+      <div class="stat-number" data-target="89">0</div>
+      <div class="stat-label">«Skatt»</div>
+      <div class="stat-sub">Det nærmeste vi kommer et kallenavn.</div>
+    </div>
+  </div>
+</section>
+
+<section class="ending-section" id="ending">
+  <div class="reveal">
+    <div class="ending-heart">❤️</div>
+    <div class="ending-message">
+      Du er min beste venn, og den jeg aller helst vil dele resten av livet med.
+      Gratulerer med 30 fantastiske år i denne verden.
+    </div>
+    <div class="ending-from">
+      Vi er verdens heldigste som har deg! — Daniel, Noel &amp; Molly
+    </div>
+    <p class="ending-small">
+      «Vi elsker mamma!»<br>
+      — fra de aller første meldingene, og alle meldingene/opplevelsene som kommer ❤️
+    </p>
+  </div>
+</section>
+
+<div class="confetti-container" id="confetti"></div>
+
+<!-- Lightbox -->
+<div class="lightbox-overlay" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose">&times;</button>
+  <button class="lightbox-nav lightbox-prev" id="lightboxPrev">&#8249;</button>
+  <img src="" alt="" id="lightboxImg">
+  <video src="" id="lightboxVid" autoplay loop muted playsinline style="display:none"></video>
+  <button class="lightbox-nav lightbox-next" id="lightboxNext">&#8250;</button>
+  <div class="lightbox-counter" id="lightboxCounter"></div>
+</div>
+
+<script>
+(function() {
+  var AZURE_ACCOUNT = 'lindabirthdaystore';
+  var AZURE_CONTAINER = 'timeline-images';
+  var SAS_TOKEN = 'se=2026-04-23T00%3A07Z&sp=rcwdl&spr=https&sv=2026-02-06&sr=c&sig=in7wxPOOEydBwflxeeVagv1yvqw9QrNW2AfalshA4TM%3D';
+  var BASE_URL = 'https://' + AZURE_ACCOUNT + '.blob.core.windows.net/' + AZURE_CONTAINER;
+
+  // ---- Floating hearts ----
+  var heroHearts = document.getElementById('heroHearts');
+  var heartSymbols = ['\u2665', '\u2764', '\uD83D\uDC95', '\u2726', '\u2661'];
+  for (var i = 0; i < 20; i++) {
+    var heart = document.createElement('span');
+    heart.classList.add('floating-heart');
+    heart.textContent = heartSymbols[Math.floor(Math.random() * heartSymbols.length)];
+    heart.style.left = Math.random() * 100 + '%';
+    heart.style.animationDuration = (8 + Math.random() * 12) + 's';
+    heart.style.animationDelay = (Math.random() * 15) + 's';
+    heart.style.fontSize = (0.8 + Math.random() * 1.2) + 'rem';
+    heroHearts.appendChild(heart);
+  }
+
+  // ---- Reveal animations ----
+  var reveals = document.querySelectorAll('.reveal');
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+  reveals.forEach(function(el) { observer.observe(el); });
+
+  var timelineItems = document.querySelectorAll('.timeline-item');
+  timelineItems.forEach(function(item, i) {
+    item.style.transitionDelay = (i % 3) * 0.12 + 's';
+  });
+
+  // ---- Animated counters ----
+  var countersAnimated = new Set();
+  function animateCounter(el) {
+    if (countersAnimated.has(el)) return;
+    countersAnimated.add(el);
+    var target = parseInt(el.getAttribute('data-target'), 10);
+    var duration = 2000;
+    var start = null;
+    function easeOutQuart(t) { return 1 - Math.pow(1 - t, 4); }
+    function step(ts) {
+      if (!start) start = ts;
+      var p = Math.min((ts - start) / duration, 1);
+      el.textContent = Math.floor(easeOutQuart(p) * target).toLocaleString('nb-NO');
+      if (p < 1) requestAnimationFrame(step);
+      else el.textContent = target.toLocaleString('nb-NO');
+    }
+    requestAnimationFrame(step);
+  }
+  var statNumbers = document.querySelectorAll('.stat-number[data-target]');
+  var counterObs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) { animateCounter(e.target); counterObs.unobserve(e.target); }
+    });
+  }, { threshold: 0.5 });
+  statNumbers.forEach(function(el) { counterObs.observe(el); });
+
+  // ---- Confetti ----
+  var confettiTriggered = false;
+  var ending = document.getElementById('ending');
+  var confettiContainer = document.getElementById('confetti');
+  var endObs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting && !confettiTriggered) { confettiTriggered = true; launchConfetti(); }
+    });
+  }, { threshold: 0.3 });
+  endObs.observe(ending);
+
+  function launchConfetti() {
+    var colors = ['#D4A5A5','#C9A96E','#E8C8C8','#B07878','#E0CDA3','#F5E6D3','#ff6b8a','#ffd700'];
+    for (var i = 0; i < 100; i++) {
+      var p = document.createElement('div');
+      p.classList.add('confetti-piece');
+      p.style.left = Math.random()*100+'%';
+      p.style.background = colors[Math.floor(Math.random()*colors.length)];
+      p.style.animationDuration = (2.5+Math.random()*3)+'s';
+      p.style.animationDelay = (Math.random()*1.5)+'s';
+      var s = 6+Math.random()*8;
+      p.style.width = s+'px'; p.style.height = s+'px';
+      p.style.borderRadius = Math.random()>0.5?'50%':'2px';
+      confettiContainer.appendChild(p);
+    }
+    setTimeout(function(){ confettiContainer.innerHTML=''; }, 6000);
+  }
+
+  // ---- Azure Blob helpers ----
+  function uploadBlob(file, eventId) {
+    return new Promise(function(resolve, reject) {
+      var ext = file.name.split('.').pop().toLowerCase();
+      var blobName = eventId + '/' + Date.now() + '-' + Math.random().toString(36).substr(2,6) + '.' + ext;
+      var url = BASE_URL + '/' + blobName + '?' + SAS_TOKEN;
+      var xhr = new XMLHttpRequest();
+      xhr.open('PUT', url, true);
+      xhr.setRequestHeader('x-ms-blob-type', 'BlockBlob');
+      xhr.setRequestHeader('Content-Type', file.type || 'application/octet-stream');
+      xhr.onload = function() {
+        if (xhr.status >= 200 && xhr.status < 300) {
+          resolve(BASE_URL + '/' + blobName);
+        } else {
+          reject(new Error('Upload failed: ' + xhr.status));
+        }
+      };
+      xhr.onerror = function() { reject(new Error('Network error')); };
+      xhr.send(file);
+    });
+  }
+
+  function listBlobs(eventId) {
+    return new Promise(function(resolve, reject) {
+      var url = BASE_URL + '?restype=container&comp=list&prefix=' + encodeURIComponent(eventId + '/') + '&' + SAS_TOKEN;
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', url, true);
+      xhr.onload = function() {
+        if (xhr.status >= 200 && xhr.status < 300) {
+          var parser = new DOMParser();
+          var xml = parser.parseFromString(xhr.responseText, 'text/xml');
+          var blobs = xml.querySelectorAll('Blob');
+          var urls = [];
+          blobs.forEach(function(b) {
+            var name = b.querySelector('Name').textContent;
+            urls.push(BASE_URL + '/' + name);
+          });
+          resolve(urls);
+        } else {
+          reject(new Error('List failed: ' + xhr.status));
+        }
+      };
+      xhr.onerror = function() { reject(new Error('Network error')); };
+      xhr.send();
+    });
+  }
+
+  function deleteBlob(blobUrl) {
+    return new Promise(function(resolve, reject) {
+      var path = blobUrl.replace(BASE_URL + '/', '');
+      var url = BASE_URL + '/' + path + '?' + SAS_TOKEN;
+      var xhr = new XMLHttpRequest();
+      xhr.open('DELETE', url, true);
+      xhr.onload = function() {
+        if (xhr.status >= 200 && xhr.status < 300 || xhr.status === 404) {
+          resolve();
+        } else {
+          reject(new Error('Delete failed: ' + xhr.status));
+        }
+      };
+      xhr.onerror = function() { reject(new Error('Network error')); };
+      xhr.send();
+    });
+  }
+
+  // ---- Lightbox ----
+  var lightboxOverlay = document.getElementById('lightbox');
+  var lightboxImg = document.getElementById('lightboxImg');
+  var lightboxVid = document.getElementById('lightboxVid');
+  var lightboxCounter = document.getElementById('lightboxCounter');
+  var currentLightboxImages = [];
+  var currentLightboxIdx = 0;
+
+  function openLightbox(images, idx) {
+    currentLightboxImages = images;
+    currentLightboxIdx = idx;
+    showLightboxImage();
+    lightboxOverlay.classList.add('active');
+  }
+
+  function showLightboxImage() {
+    var url = currentLightboxImages[currentLightboxIdx];
+    if (isVideoUrl(url)) {
+      lightboxImg.style.display = 'none';
+      lightboxVid.style.display = '';
+      lightboxVid.src = url;
+      lightboxVid.play();
+    } else {
+      lightboxVid.style.display = 'none';
+      lightboxVid.pause();
+      lightboxImg.style.display = '';
+      lightboxImg.src = url;
+    }
+    lightboxCounter.textContent = (currentLightboxIdx + 1) + ' / ' + currentLightboxImages.length;
+  }
+
+  function closeLightbox() {
+    lightboxOverlay.classList.remove('active');
+    lightboxVid.pause();
+  }
+
+  document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+
+  lightboxOverlay.addEventListener('click', function(e) {
+    if (e.target === lightboxOverlay) closeLightbox();
+  });
+
+  document.getElementById('lightboxPrev').addEventListener('click', function(e) {
+    e.stopPropagation();
+    currentLightboxIdx = (currentLightboxIdx - 1 + currentLightboxImages.length) % currentLightboxImages.length;
+    showLightboxImage();
+  });
+
+  document.getElementById('lightboxNext').addEventListener('click', function(e) {
+    e.stopPropagation();
+    currentLightboxIdx = (currentLightboxIdx + 1) % currentLightboxImages.length;
+    showLightboxImage();
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (!lightboxOverlay.classList.contains('active')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') { currentLightboxIdx = (currentLightboxIdx - 1 + currentLightboxImages.length) % currentLightboxImages.length; showLightboxImage(); }
+    if (e.key === 'ArrowRight') { currentLightboxIdx = (currentLightboxIdx + 1) % currentLightboxImages.length; showLightboxImage(); }
+  });
+
+  // ---- Media helpers ----
+  var VIDEO_EXTS = ['mp4','webm','mov','avi','mkv','m4v','ogv'];
+  function isVideoUrl(url) {
+    var clean = url.split('?')[0].toLowerCase();
+    var ext = clean.split('.').pop();
+    return VIDEO_EXTS.indexOf(ext) !== -1;
+  }
+
+  function addSlide(gallery, mediaUrl) {
+    var slide = document.createElement('div');
+    slide.classList.add('carousel-slide');
+    var isVid = isVideoUrl(mediaUrl);
+
+    if (isVid) {
+      var vid = document.createElement('video');
+      vid.src = mediaUrl;
+      vid.autoplay = true;
+      vid.loop = true;
+      vid.muted = true;
+      vid.playsInline = true;
+      vid.setAttribute('playsinline', '');
+      slide.appendChild(vid);
+      var badge = document.createElement('span');
+      badge.classList.add('video-badge');
+      badge.textContent = '\u25B6 Video';
+      slide.appendChild(badge);
+    } else {
+      var img = document.createElement('img');
+      img.src = mediaUrl;
+      img.alt = '';
+      img.loading = 'lazy';
+      slide.appendChild(img);
+    }
+
+    slide.addEventListener('click', function() {
+      var slides = gallery.querySelectorAll('.carousel-slide');
+      var urls = []; var idx = 0;
+      slides.forEach(function(s, i) {
+        var el = s.querySelector('img') || s.querySelector('video');
+        if (el) urls.push(el.src);
+        if (s === slide) idx = i;
+      });
+      openLightbox(urls, idx);
+    });
+
+    gallery.appendChild(slide);
+  }
+
+  function initCarousel(gallery) {
+    var slides = gallery.querySelectorAll('.carousel-slide');
+    if (slides.length === 0) return;
+
+    slides[0].classList.add('active');
+
+    if (slides.length <= 1) return;
+
+    var prev = document.createElement('button');
+    prev.classList.add('carousel-nav', 'carousel-prev');
+    prev.innerHTML = '&#8249;';
+    gallery.appendChild(prev);
+
+    var next = document.createElement('button');
+    next.classList.add('carousel-nav', 'carousel-next');
+    next.innerHTML = '&#8250;';
+    gallery.appendChild(next);
+
+    var dotsWrap = document.createElement('div');
+    dotsWrap.classList.add('carousel-dots');
+    gallery.appendChild(dotsWrap);
+
+    slides.forEach(function(_, i) {
+      var dot = document.createElement('button');
+      dot.classList.add('carousel-dot');
+      if (i === 0) dot.classList.add('active');
+      dot.addEventListener('click', function(e) { e.stopPropagation(); goTo(i); });
+      dotsWrap.appendChild(dot);
+    });
+
+    var current = 0;
+    var auto = setInterval(function() { goTo((current + 1) % slides.length); }, 5000);
+
+    function goTo(idx) {
+      slides[current].classList.remove('active');
+      dotsWrap.children[current].classList.remove('active');
+      current = idx;
+      slides[current].classList.add('active');
+      dotsWrap.children[current].classList.add('active');
+      clearInterval(auto);
+      auto = setInterval(function() { goTo((current + 1) % slides.length); }, 5000);
+    }
+
+    prev.addEventListener('click', function(e) {
+      e.stopPropagation();
+      goTo((current - 1 + slides.length) % slides.length);
+    });
+    next.addEventListener('click', function(e) {
+      e.stopPropagation();
+      goTo((current + 1) % slides.length);
+    });
+  }
+
+  // ---- Drag & drop + file input ----
+  var allItems = document.querySelectorAll('.timeline-item[data-event-id]');
+  allItems.forEach(function(item) {
+    var eventId = item.getAttribute('data-event-id');
+    var dropzone = item.querySelector('.photo-dropzone');
+    var fileInput = dropzone.querySelector('input[type="file"]');
+    var gallery = item.querySelector('.photo-gallery');
+
+    function handleFiles(files) {
+      var statusEl = dropzone.querySelector('.upload-progress');
+      if (!statusEl) {
+        statusEl = document.createElement('div');
+        statusEl.classList.add('upload-progress');
+        dropzone.appendChild(statusEl);
+      }
+      var total = files.length;
+      var done = 0;
+      statusEl.textContent = 'Laster opp 0/' + total + '...';
+
+      Array.from(files).forEach(function(file) {
+        if (!file.type.startsWith('image/') && !file.type.startsWith('video/')) { done++; return; }
+        uploadBlob(file, eventId).then(function(url) {
+          addSlide(gallery, url);
+          done++;
+          statusEl.textContent = done < total ? 'Laster opp ' + done + '/' + total + '...' : '';
+        }).catch(function(err) {
+          console.error(err);
+          done++;
+          statusEl.textContent = done < total ? 'Laster opp ' + done + '/' + total + '...' : 'Feil ved opplasting';
+        });
+      });
+    }
+
+    dropzone.addEventListener('dragover', function(e) {
+      e.preventDefault();
+      dropzone.classList.add('dragover');
+    });
+
+    dropzone.addEventListener('dragleave', function() {
+      dropzone.classList.remove('dragover');
+    });
+
+    dropzone.addEventListener('drop', function(e) {
+      e.preventDefault();
+      dropzone.classList.remove('dragover');
+      if (e.dataTransfer.files.length) handleFiles(e.dataTransfer.files);
+    });
+
+    fileInput.addEventListener('change', function() {
+      if (fileInput.files.length) handleFiles(fileInput.files);
+      fileInput.value = '';
+    });
+
+    listBlobs(eventId).then(function(urls) {
+      urls.forEach(function(url) {
+        addSlide(gallery, url);
+      });
+      initCarousel(gallery);
+    }).catch(function() {});
+  });
+})();
+</script>
+
+</body>
+</html>
