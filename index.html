@@ -2155,6 +2155,8 @@ body {
     var giftRevealed = false;
     var isScratching = false;
 
+    var tearParticles = [];
+
     function initGiftCanvas() {
       var w = giftWrapper.offsetWidth;
       var h = giftWrapper.offsetHeight;
@@ -2166,43 +2168,97 @@ body {
       gCtx.scale(dpr, dpr);
 
       var grad = gCtx.createLinearGradient(0, 0, w, h);
-      grad.addColorStop(0, '#D4A5A5');
-      grad.addColorStop(0.3, '#C9A96E');
-      grad.addColorStop(0.6, '#E8C8C8');
-      grad.addColorStop(1, '#D4A5A5');
+      grad.addColorStop(0, '#c94040');
+      grad.addColorStop(0.5, '#d45555');
+      grad.addColorStop(1, '#b83030');
       gCtx.fillStyle = grad;
       gCtx.fillRect(0, 0, w, h);
 
-      gCtx.strokeStyle = 'rgba(255,255,255,0.15)';
+      gCtx.strokeStyle = 'rgba(255,255,255,0.07)';
       gCtx.lineWidth = 1;
-      for (var i = -h; i < w + h; i += 18) {
+      for (var i = -h; i < w + h; i += 14) {
         gCtx.beginPath();
         gCtx.moveTo(i, 0);
         gCtx.lineTo(i + h, h);
         gCtx.stroke();
       }
+      for (var i = -w; i < w + h; i += 14) {
+        gCtx.beginPath();
+        gCtx.moveTo(0, i);
+        gCtx.lineTo(w, i + w);
+        gCtx.stroke();
+      }
 
-      gCtx.fillStyle = 'rgba(255,255,255,0.25)';
-      gCtx.font = (Math.min(w, h) * 0.35) + 'px serif';
+      gCtx.fillStyle = 'rgba(255,215,0,0.12)';
+      for (var px = 20; px < w; px += 40) {
+        for (var py = 20; py < h; py += 40) {
+          gCtx.beginPath();
+          gCtx.arc(px + Math.random()*10, py + Math.random()*10, 3 + Math.random()*3, 0, Math.PI*2);
+          gCtx.fill();
+        }
+      }
+
+      var rw = 28;
+      gCtx.fillStyle = 'rgba(201,169,110,0.6)';
+      gCtx.fillRect(w/2 - rw/2, 0, rw, h);
+      gCtx.fillRect(0, h/2 - rw/2, w, rw);
+
+      gCtx.fillStyle = 'rgba(201,169,110,0.7)';
+      gCtx.shadowColor = 'rgba(0,0,0,0.15)';
+      gCtx.shadowBlur = 6;
+      var bx = w/2, by = h/2, bs = 38;
+      gCtx.beginPath();
+      gCtx.moveTo(bx, by - bs);
+      gCtx.bezierCurveTo(bx - bs, by - bs*1.4, bx - bs*1.6, by - bs*0.2, bx, by);
+      gCtx.bezierCurveTo(bx + bs*1.6, by - bs*0.2, bx + bs, by - bs*1.4, bx, by - bs);
+      gCtx.fill();
+      gCtx.beginPath();
+      gCtx.moveTo(bx, by + bs);
+      gCtx.bezierCurveTo(bx - bs, by + bs*1.4, bx - bs*1.6, by + bs*0.2, bx, by);
+      gCtx.bezierCurveTo(bx + bs*1.6, by + bs*0.2, bx + bs, by + bs*1.4, bx, by + bs);
+      gCtx.fill();
+      gCtx.shadowBlur = 0;
+
+      gCtx.font = 'bold 14px Lato, sans-serif';
+      gCtx.fillStyle = 'rgba(255,255,255,0.6)';
       gCtx.textAlign = 'center';
       gCtx.textBaseline = 'middle';
-      gCtx.fillText('🎁', w / 2, h / 2);
-
-      gCtx.font = '16px Lato, sans-serif';
-      gCtx.fillStyle = 'rgba(255,255,255,0.5)';
-      gCtx.fillText('Skrap her!', w / 2, h / 2 + Math.min(w, h) * 0.25);
+      gCtx.fillText('Riv opp gaven!', w / 2, h * 0.85);
     }
 
     initGiftCanvas();
 
-    var brushRadius = ('ontouchstart' in window) ? 35 : 28;
+    var brushRadius = ('ontouchstart' in window) ? 32 : 24;
+    var paperColors = ['#c94040','#d45555','#b83030','#C9A96E','#e0cda3'];
+
+    function spawnTearParticle(x, y) {
+      var el = document.createElement('div');
+      el.style.cssText = 'position:absolute;width:' + (4+Math.random()*8) + 'px;height:' + (4+Math.random()*8) + 'px;background:' + paperColors[Math.floor(Math.random()*paperColors.length)] + ';border-radius:2px;left:' + x + 'px;top:' + y + 'px;z-index:5;pointer-events:none;opacity:1;transition:all 0.7s ease-out;';
+      giftWrapper.appendChild(el);
+      var dx = (Math.random()-0.5)*80;
+      var dy = (Math.random()-0.5)*80 - 20;
+      requestAnimationFrame(function() {
+        el.style.transform = 'translate('+dx+'px,'+dy+'px) rotate('+(Math.random()*360)+'deg)';
+        el.style.opacity = '0';
+      });
+      setTimeout(function() { el.remove(); }, 700);
+    }
 
     function scratch(x, y) {
       gCtx.globalCompositeOperation = 'destination-out';
-      gCtx.beginPath();
-      gCtx.arc(x, y, brushRadius, 0, Math.PI * 2);
-      gCtx.fill();
+      for (var j = 0; j < 3; j++) {
+        var ox = (Math.random()-0.5) * brushRadius;
+        var oy = (Math.random()-0.5) * brushRadius;
+        var r = brushRadius * (0.5 + Math.random()*0.6);
+        gCtx.beginPath();
+        gCtx.arc(x + ox, y + oy, r, 0, Math.PI * 2);
+        gCtx.fill();
+      }
       gCtx.globalCompositeOperation = 'source-over';
+
+      if (Math.random() < 0.4) {
+        spawnTearParticle(x, y);
+      }
     }
 
     function getPos(e) {
@@ -2228,25 +2284,34 @@ body {
     function revealGift() {
       if (giftRevealed) return;
       giftRevealed = true;
-      giftCanvas.classList.add('revealed');
-      giftReveal.classList.add('shown');
-      if (giftHint) giftHint.classList.add('hidden');
-      launchMoneyRain();
+
+      for (var p = 0; p < 30; p++) {
+        var rx = Math.random() * giftWrapper.offsetWidth;
+        var ry = Math.random() * giftWrapper.offsetHeight;
+        spawnTearParticle(rx, ry);
+      }
+
+      setTimeout(function() {
+        giftCanvas.classList.add('revealed');
+        giftReveal.classList.add('shown');
+        if (giftHint) giftHint.classList.add('hidden');
+        launchMoneyRain();
+      }, 200);
     }
 
     function launchMoneyRain() {
-      var emojis = ['💵', '💶', '💰', '💸', '🤑', '💳', '🪙'];
-      for (var i = 0; i < 40; i++) {
+      var emojis = ['💵','💶','💰','💸','🤑','💳','🪙','💵','💶','💰'];
+      for (var i = 0; i < 50; i++) {
         var m = document.createElement('span');
         m.classList.add('money-piece');
         m.textContent = emojis[Math.floor(Math.random() * emojis.length)];
         m.style.left = Math.random() * 100 + '%';
-        m.style.animationDuration = (1.5 + Math.random() * 2) + 's';
-        m.style.animationDelay = (Math.random() * 1.2) + 's';
-        m.style.fontSize = (1.2 + Math.random() * 1.2) + 'rem';
+        m.style.animationDuration = (2 + Math.random() * 2.5) + 's';
+        m.style.animationDelay = (Math.random() * 2) + 's';
+        m.style.fontSize = (1.4 + Math.random() * 1.4) + 'rem';
         moneyRain.appendChild(m);
       }
-      setTimeout(function() { moneyRain.innerHTML = ''; }, 5000);
+      setTimeout(function() { moneyRain.innerHTML = ''; }, 6000);
     }
 
     var checkTimer = null;
